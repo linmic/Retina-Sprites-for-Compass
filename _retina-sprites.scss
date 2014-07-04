@@ -2,7 +2,7 @@
 @import "compass/css3/background-size";      // Include helper to calc background size
 
 
-@mixin retina-sprite($name, $hover: false, $active: false) {
+@mixin retina-sprite($name, $sprites, $sprites2x, $hover: false, $active: false) {
   @include _retina-sprite($name, $sprites, $sprites2x, $hover, $active);
 }
 

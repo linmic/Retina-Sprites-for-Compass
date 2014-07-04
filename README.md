@@ -33,20 +33,28 @@ In your SCSS file, declare where your sprites are located. In this example I hav
 
     $sprites: sprite-map("sprites/buttons/*.png");            // import 1x sprites
     $sprites2x: sprite-map("sprites-retina/buttons/*.png");   // import 2x sprites
-    
+
+You can also declare multiple sprite-maps if you want. For example:
+
+    $foo_sprites: sprite-map("sprites/foo/*.png"); // 1x version of foo
+    $foo_sprites2x: sprite-map("sprites/foo2x/*.png"); // 2x version of foo
+
+    $bar_sprites: sprite-map("sprites/bar/*.png"); // 1x version of bar
+    $bar_sprites2x: sprite-map("sprites/bar2x/*.png"); // 2x version of bar
+
 If you would like to add padding to your sprites, use the spacing parameter and double the value for the retina version:
 
     $sprites: sprite-map("sprites/buttons/*.png", $spacing: 10px);            // import 1x sprites, 10px padding
     $sprites2x: sprite-map("sprites-retina/buttons/*.png", $spacing: 20px);   // import 2x sprites, 20px padding
 
 Almost ready to rock and roll!! Create a class for your sprite, and use an include to generate it.
- 	
-	.myHoverActiveButton {
-		@include retina-sprite(signIn, $hover: true, $active: true);    // imports signIn.png, signIn_hover.png, and signIn_active.png
-	}
+
+    .myHoverActiveButton {
+      @include retina-sprite(signIn, $hover: true, $active: true);    // imports signIn.png, signIn_hover.png, and signIn_active.png
+    }
 
     .myHoverButton {
-	   @include retina-sprite(signIn, $hover: true);                    // imports signIn.png and signIn_hover.png
+      @include retina-sprite(signIn, $hover: true);                    // imports signIn.png and signIn_hover.png
     }
 
     .myBoringButton {
