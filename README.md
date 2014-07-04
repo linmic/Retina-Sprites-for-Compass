@@ -50,15 +50,15 @@ If you would like to add padding to your sprites, use the spacing parameter and 
 Almost ready to rock and roll!! Create a class for your sprite, and use an include to generate it.
 
     .myHoverActiveButton {
-      @include retina-sprite(signIn, $hover: true, $active: true);    // imports signIn.png, signIn_hover.png, and signIn_active.png
+      @include retina-sprite(signIn, $foo_sprites, $foo_sprites2x, $hover: true, $active: true);    // imports signIn.png, signIn_hover.png, and signIn_active.png
     }
 
     .myHoverButton {
-      @include retina-sprite(signIn, $hover: true);                    // imports signIn.png and signIn_hover.png
+      @include retina-sprite(signIn, $foo_sprites, $foo_sprites2x, $hover: true);                    // imports signIn.png and signIn_hover.png
     }
 
     .myBoringButton {
-       @include retina-sprite(signIn);                                  // imports signIn.png
+       @include retina-sprite(signIn, $foo_sprites, $foo_sprites2x,);                                  // imports signIn.png
     }
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/9c03052a2c62c8153c13242efe0f6d2a "githalytics.com")](http://githalytics.com/AdamBrodzinski/Retina-Sprites-for-Compass)
